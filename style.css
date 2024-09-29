@@ -1,0 +1,46 @@
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  width: 25%;
+  padding: 20px;
+  font-size: 1.5rem;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+button:nth-child(4n) {
+  background-color: #f39c12;
+  color: white;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.screen {
+  background-color: #333;
+  color: white;
+  font-size: 2rem;
+  padding: 20px;
+  text-align: right;
+  border-radius: 10px 10px 0 0;
+}
