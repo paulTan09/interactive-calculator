@@ -5,6 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
+  background-color: #313338;
 }
 
 .calculator {
@@ -22,25 +23,46 @@ button {
   width: 25%;
   padding: 20px;
   font-size: 1.5rem;
-  background-color: #eee;
-  border: 1px solid #ccc;
+  color: white;
+  background-color: #3c3c3c;
   cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #323232;
+}
+
+#btnEqual {
+  background-color: #40bdff;
+  color: #0f2839;
+}
+#btnEqual:hover {
+  background-color: #3cace8b0;
 }
 
 button:nth-child(4n) {
-  background-color: #f39c12;
+  background-color: #323232;
   color: white;
 }
+button:nth-child(4n):hover {
+  background-color: #3c3c3c;
+}
 
-button:hover {
-  background-color: #ddd;
+.clear {
+  background-color: red;
+}
+.clear:hover {
+  background-color: #cc0000;
 }
 
 .screen {
-  background-color: #333;
+  background-color: #202020;
   color: white;
   font-size: 2rem;
   padding: 20px;
   text-align: right;
-  border-radius: 10px 10px 0 0;
+  border: 2px solid grey;
+  border-radius: 10px 10px 5px 5px;
+  border-bottom: none;
 }
