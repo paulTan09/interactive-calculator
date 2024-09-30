@@ -1,4 +1,3 @@
-
 body {
   display: flex;
   height: 100vh;
@@ -50,19 +49,50 @@ button:nth-child(4n):hover {
 }
 
 .clear {
+  flex: 1;
   background-color: red;
 }
 .clear:hover {
   background-color: #cc0000;
 }
 
+.material-icons {
+  background-color: #323232;
+}
+.material-icons:hover {
+  background-color: #3c3c3c;
+}
+
 .screen {
   background-color: #202020;
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding: 20px;
   text-align: right;
   border: 2px solid grey;
   border-radius: 10px 10px 5px 5px;
   border-bottom: none;
+}
+
+.tutorial {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #1f1f1f;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #cccccc;
+}
+.tutorial h3 {
+  margin-top: 0;
+  color: #cccccc;
+}
+.tutorial ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+.tutorial li {
+  margin-bottom: 5px;
+}
+.tutorial strong {
+  color: #569cd6;
 }

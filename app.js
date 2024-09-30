@@ -1,3 +1,30 @@
+// KEYBOARD SUPPORT
+function handleKeyboardInput(keyboardEvent) {
+  const key = keyboardEvent.key;
+
+  if (key >= '0' && key <= '9') {
+    appendNumber(key);
+  } else if (key === '.') {
+    handleDecimal();
+  } else if (key === '+' || key === '-' || key === '*' || key === '/') {
+    handleOperator(key);
+  } else if (key === 'Enter' || key === '=') {
+    evaluate();
+  } else if (key === 'Escape' || key === 'c' || key === 'C') {
+    clear();
+  } else if (key === 'Backspace') {
+    handleBackspace();
+  }
+}
+
+// BACKSPACE handler
+function handleBackspace() {
+  if (currentInput !== '') {
+    currentInput = currentInput.slice(0, -1);
+    updateScreen();
+  }
+}
+
 // calc. function
 function operate(operator, num1, num2) {
   operator = operator.trim(); // removes extra spaces
@@ -24,8 +51,11 @@ const screen = document.querySelector(".screen");
 const buttonNumbers = document.querySelectorAll(".number");
 const buttonOperators = document.querySelectorAll(".operator");
 const buttonClear = document.querySelector(".clear");
+const buttonDelete = document.querySelector(".material-icons");
 const buttonEqual = document.querySelector("#btnEqual");
 const decimalButton = document.querySelector("#btnFloat");
+
+document.addEventListener('keydown', handleKeyboardInput); //keyboard listener
 
 function updateScreen() {
   if (previousInput && currentOperator) {
@@ -85,7 +115,7 @@ function evaluate() {
     return;
   }
   
-// if currentInput is empty, use previousInput (allows repeated pressing of equals)
+// if currentInput is empty, use previousInput (allows repeated equal presses)
 const num2 = currentInput === '' ? previousInput : currentInput;
   
 const result = operate(currentOperator, parseFloat(previousInput), parseFloat(num2));
@@ -102,6 +132,7 @@ function clear() {
   currentInput = '';
   previousInput = '';
   currentOperator = null;
+  shouldResetScreen = false;
   updateScreen();
 }
 
@@ -124,6 +155,8 @@ buttonOperators.forEach(button => {
 buttonEqual.addEventListener('click', evaluate);
 
 buttonClear.addEventListener('click', clear);
+
+buttonDelete.addEventListener('click', handleBackspace);
 
 // Initialize
 updateScreen();
