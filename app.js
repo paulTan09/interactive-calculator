@@ -1,3 +1,8 @@
+// LIGHT MODE
+function toggleLightMode() {
+  document.body.classList.toggle("light-mode");
+}
+
 // KEYBOARD SUPPORT
 function handleKeyboardInput(keyboardEvent) {
   const key = keyboardEvent.key;

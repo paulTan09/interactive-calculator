@@ -24,6 +24,7 @@ button {
   font-size: 1.5rem;
   color: white;
   background-color: #3c3c3c;
+  border: 1px solid black;
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s ease;
@@ -74,6 +75,27 @@ button:nth-child(4n):hover {
   border-bottom: none;
 }
 
+/* THEME TOGGLE */
+
+#themeToggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  padding: 10px;
+  font-size: 0.9rem;
+  background-color: #40bdff;
+  color: #0f2839;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#themeToggle:hover {
+  background-color: #3cace8b0;
+}
+
+
 .tutorial {
   margin-top: 30px;
   padding: 15px;
@@ -95,4 +117,84 @@ button:nth-child(4n):hover {
 }
 .tutorial strong {
   color: #569cd6;
+}
+
+
+/* LIGHT MODE*/
+
+body.light-mode {
+  background-color: white;
+}
+
+body.light-mode .screen {
+  background-color: #f3f3f3;
+  color: black;
+  border-color: #8fa9f3;
+}
+
+body.light-mode button {
+  background-color: #e0e0e0;
+  color: black;
+  border: 1px solid grey;
+}
+
+body.light-mode button:hover {
+  background-color: #d0d0d0;
+}
+
+body.light-mode button:nth-child(4n) {
+  background-color: #d0d0d0;
+  color: black;
+}
+
+body.light-mode button:nth-child(4n):hover {
+  background-color: #c0c0c0;
+}
+
+body.light-mode #btnEqual {
+  background-color: #007bff;
+  color: white;
+}
+
+body.light-mode #btnEqual:hover {
+  background-color: #0056b3;
+}
+
+body.light-mode .clear {
+  background-color: #dc3545;
+  color: white;
+}
+
+body.light-mode .clear:hover {
+  background-color: #c82333;
+}
+
+body.light-mode .material-icons {
+  background-color: #d0d0d0;
+}
+
+body.light-mode .material-icons:hover {
+  background-color: #c0c0c0;
+}
+
+body.light-mode .tutorial {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+body.light-mode .tutorial h3 {
+  color: #212529;
+}
+
+body.light-mode .tutorial strong {
+  color: #0056b3;
+}
+
+body.light-mode #themeToggle {
+  background-color: #007bff;
+  color: white;
+}
+
+body.light-mode #themeToggle:hover {
+  background-color: #0056b3;
 }
